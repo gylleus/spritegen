@@ -149,7 +149,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f89dcba585739548925cd94026b54da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialPortalsPerSecond: 0
+  initialPortalsPerSecond: 1
+  startDifficulty: 1
+  difficultyIncreaseFactor: 1.2
+  difficultyIncreaseAddend: 0.4
+  difficultyIncreaseInterval: 3
   portalEdgePadding: {x: 0, y: 25}
   portalMinSpaceBetween: 0.2
   portal: {fileID: 99540580125501556, guid: 00fe18cb37641454aa652412780abee1, type: 3}
