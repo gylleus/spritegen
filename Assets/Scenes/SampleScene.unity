@@ -130,6 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 43005737}
   - component: {fileID: 43005736}
+  - component: {fileID: 43005738}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -153,9 +154,10 @@ MonoBehaviour:
   startDifficulty: 1
   difficultyIncreaseFactor: 1.2
   difficultyIncreaseAddend: 0.4
-  difficultyIncreaseInterval: 3
+  difficultyIncreaseInterval: 10
   portalEdgePadding: {x: 0, y: 25}
   portalMinSpaceBetween: 0.2
+  portalSpawnDifficultyScaling: 1
   portal: {fileID: 99540580125501556, guid: 00fe18cb37641454aa652412780abee1, type: 3}
 --- !u!4 &43005737
 Transform:
@@ -171,6 +173,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &43005738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43005735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d4a73931d2b2e4eb7633aa78e3eb72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialEnemyMovementSpeed: 0.012
+  movementSpeedDifficultyScaling: 0.0003
+  enemyTemplate: {fileID: 3788580677519039305, guid: 1b3a4c5d361070a4eaa739a425cc8d5a,
+    type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

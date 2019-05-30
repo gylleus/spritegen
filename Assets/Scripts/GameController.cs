@@ -4,28 +4,40 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour {
 
+    [Header("Initial state variables")]
     public float initialPortalsPerSecond = 1.0f;
     public float startDifficulty = 1.0f;
 
+    [Header("Difficulty settings")]
     public float difficultyIncreaseFactor = 1.0f;
     public float difficultyIncreaseAddend = 0.0f;
     public float difficultyIncreaseInterval = 10.0f;
+    
+    [Header("Portal spawn settings")]
     // Padding between edges and portals spawned
     public Vector2 portalEdgePadding;
     public float portalMinSpaceBetween;
-
+    public float portalSpawnDifficultyScaling = 1.0f;
 
     public GameObject portal;
 
     Vector2[] portalSpawnAreas;
     float currentDifficulty;
     float portalsPerSecond;
+    EnemySpawner enemySpawner;
+
+    // Public functions
+    public float GetDifficulty() {
+        return currentDifficulty;
+    }
+
 
     // Start is called before the first frame update
     void Start() {
         portalSpawnAreas = SetSpawnAreas();
         currentDifficulty = startDifficulty;
         portalsPerSecond = initialPortalsPerSecond;
+        enemySpawner = GetComponent<EnemySpawner>();
 
         StartCoroutine("PortalSpawner");
         StartCoroutine("DifficultyIncreaser");
@@ -33,22 +45,23 @@ public class GameController : MonoBehaviour {
 
     IEnumerator DifficultyIncreaser() {
         while (true) {
+            yield return new WaitForSeconds(difficultyIncreaseInterval);
             UpdateDifficulty();
-            yield return new WaitForSeconds(difficultyIncreaseFactor);
         }
     }
 
     IEnumerator PortalSpawner() {
         while (true) {
             Vector2 spawnLocation = SelectSpawnArea();
-            Instantiate(portal, new Vector3(spawnLocation.x, spawnLocation.y), Quaternion.identity);
+            GameObject newPortal = Instantiate(portal, new Vector3(spawnLocation.x, spawnLocation.y), Quaternion.identity);
+            newPortal.GetComponent<Portal>().SetEnemySpawner(enemySpawner);
             yield return new WaitForSeconds((1 / portalsPerSecond));
         }
     }
 
     void UpdateDifficulty() {
         currentDifficulty =  currentDifficulty * difficultyIncreaseFactor + difficultyIncreaseAddend;
-        portalsPerSecond = initialPortalsPerSecond * currentDifficulty;
+        portalsPerSecond = initialPortalsPerSecond * currentDifficulty * portalSpawnDifficultyScaling;
     }
 
     Vector2 SelectSpawnArea() {
