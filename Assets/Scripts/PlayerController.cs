@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     public float movementSpeed;
+    // Input axis is between -1 to 1 and changes continuously
+    // This variable clamps the value to prevent character from moving too slow
+    public float minInputAxis;
 
     Animator anim;
 
@@ -17,6 +20,20 @@ public class PlayerController : MonoBehaviour {
     void FixedUpdate() {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
+
+        if (horizontalInput > 0) {
+            //        horizontalInput = horizontalInput / Mathf.Abs(horizontalInput) * Mathf.Sqrt(Mathf.Abs(horizontalInput));
+            horizontalInput = Mathf.Max(horizontalInput, minInputAxis);
+        } else if (horizontalInput < 0) {
+            horizontalInput = Mathf.Min(horizontalInput, -minInputAxis);
+        }
+
+        if (verticalInput > 0) {
+            //       verticalInput = verticalInput / Mathf.Abs(verticalInput) * Mathf.Sqrt(Mathf.Abs(verticalInput));
+            verticalInput = Mathf.Max(verticalInput, minInputAxis);
+        } else if (verticalInput < 0) {
+            verticalInput = Mathf.Min(verticalInput, -minInputAxis);
+        }
 
         Vector3 movementDirection = new Vector3(horizontalInput, verticalInput);
 
