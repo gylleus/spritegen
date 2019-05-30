@@ -1,0 +1,961 @@
+fileFormatVersion: 2
+guid: 7805d26fe844d1b46875eb5fe2255d9a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1045652322639263977
+    second: green-portal
+  - first:
+      213: -791934590370248577
+    second: green-portal_0
+  - first:
+      213: 469781639928711543
+    second: green-portal_1
+  - first:
+      213: 3545260076813656269
+    second: green-portal_2
+  - first:
+      213: 468804365761621489
+    second: green-portal_3
+  - first:
+      213: 2042523397399735325
+    second: green-portal_4
+  - first:
+      213: -6346839898427324825
+    second: green-portal_5
+  - first:
+      213: -6275138750542954198
+    second: green-portal_6
+  - first:
+      213: -3449743666259151602
+    second: green-portal_7
+  - first:
+      213: -7051702345294633101
+    second: green-portal_8
+  - first:
+      213: 3861787178436516354
+    second: green-portal_9
+  - first:
+      213: -5657171403915288209
+    second: green-portal_10
+  - first:
+      213: 2187536986100742337
+    second: green-portal_11
+  - first:
+      213: 2092541190704025511
+    second: green-portal_12
+  - first:
+      213: -1162713953048609527
+    second: green-portal_13
+  - first:
+      213: -5976356404273791170
+    second: green-portal_14
+  - first:
+      213: -4423749492552297960
+    second: green-portal_15
+  - first:
+      213: 8307355245533890170
+    second: green-portal_16
+  - first:
+      213: -1403515146691675299
+    second: green-portal_17
+  - first:
+      213: 1518014418454902006
+    second: green-portal_18
+  - first:
+      213: 7430525269309642825
+    second: green-portal_19
+  - first:
+      213: 8398175422351686860
+    second: green-portal_20
+  - first:
+      213: -8185285558795666444
+    second: green-portal_21
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: green-portal_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87153a1abb07dda48ac88cffc1b3e886
+      internalID: -791934590370248577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green-portal_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1462ccd072d5963448e1c449bb0f7054
+      internalID: 469781639928711543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green-portal_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdb1309009781c04caea7a7c5a401d15
+      internalID: 3545260076813656269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green-portal_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbe15b4b204812e48a10e090a802d1c7
+      internalID: 468804365761621489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green-portal_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fde636dc3b1b5b499aabe3cfc6929ad
+      internalID: 2042523397399735325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green-portal_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3874f257663843c459887cdb782d23ef
+      internalID: -6346839898427324825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green-portal_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc8e54d93d5cdb418c73619b378763d
+      internalID: -6275138750542954198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green-portal_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0802368de7c032f408b317ad0a094c56
+      internalID: -3449743666259151602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green-portal_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0a4275ba33867646900e4da1fed761a
+      internalID: -7051702345294633101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green-portal_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8ebe9ca33aa67d48a3771b9ce6c929d
+      internalID: 3861787178436516354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green-portal_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 695a41a31eb6aad4fb391e0e155ade98
+      internalID: -5657171403915288209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green-portal_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21b22ae9b854802439f5c51081183281
+      internalID: 2187536986100742337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green-portal_12
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57b8be5195357a34f9ca63cfe65b2358
+      internalID: 2092541190704025511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green-portal_13
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898e59fec8050ad4cab9639092bab67f
+      internalID: -1162713953048609527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green-portal_14
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a48173252f5026f448d6446b2d116be8
+      internalID: -5976356404273791170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green-portal_15
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aa6e31177c04ae4898b378426b16fc1
+      internalID: -4423749492552297960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green-portal_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c76f88e949fb59f4ab10741027fdcc25
+      internalID: 8307355245533890170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green-portal_17
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04f59c3beec35594e835ad6fcfc0a9ef
+      internalID: -1403515146691675299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green-portal_18
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c3a341b85a0b7543896a1020ccbc40d
+      internalID: 1518014418454902006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green-portal_19
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5aa3694de1f4ad49a4c429730fae062
+      internalID: 7430525269309642825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green-portal_20
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a5d021cc2a9d7b4fba5f03ac7573c36
+      internalID: 8398175422351686860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green-portal_21
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2d425498a0928444ae3018c91b49941
+      internalID: -8185285558795666444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -228, y: -47}
+      - {x: -233, y: -51}
+      - {x: -233, y: -83}
+      - {x: -230, y: -85}
+      - {x: -218, y: -85}
+      - {x: -213, y: -71}
+      - {x: -213, y: -48}
+      - {x: -215, y: -47}
+    - - {x: -235, y: -84}
+      - {x: -232, y: -83}
+      - {x: -232, y: -80}
+      - {x: -235, y: -79}
+      - {x: -237, y: -81}
+    - - {x: -173, y: -77}
+      - {x: -170, y: -76}
+      - {x: -170, y: -73}
+      - {x: -173, y: -72}
+      - {x: -175, y: -74}
+    - - {x: -172, y: -56}
+      - {x: -172, y: -77}
+      - {x: -158, y: -77}
+      - {x: -149, y: -75}
+      - {x: -149, y: -56}
+    - - {x: -240, y: -71}
+      - {x: -237, y: -70}
+      - {x: -237, y: -67}
+      - {x: -240, y: -66}
+      - {x: -242, y: -68}
+    - - {x: -109, y: -59}
+      - {x: -113, y: -62}
+      - {x: -113, y: -70}
+      - {x: -109, y: -71}
+      - {x: -84, y: -71}
+      - {x: -82, y: -69}
+      - {x: -82, y: -59}
+    - - {x: -148, y: -70}
+      - {x: -145, y: -68}
+      - {x: -147, y: -63}
+      - {x: -150, y: -63}
+      - {x: -151, y: -66}
+    - - {x: -45, y: -61}
+      - {x: -49, y: -64}
+      - {x: -49, y: -67}
+      - {x: -45, y: -68}
+      - {x: -19, y: -68}
+      - {x: -18, y: -65}
+      - {x: -18, y: -64}
+      - {x: -22, y: -61}
+    - - {x: 10, y: -63}
+      - {x: 11, y: -66}
+      - {x: 25, y: -66}
+      - {x: 27, y: -64}
+      - {x: 26, y: -61}
+      - {x: 12, y: -61}
+    - - {x: 34, y: -61}
+      - {x: 33, y: -63}
+      - {x: 33, y: -66}
+      - {x: 50, y: -66}
+      - {x: 51, y: -64}
+      - {x: 50, y: -61}
+    - - {x: 71, y: -63}
+      - {x: 72, y: -66}
+      - {x: 77, y: -66}
+      - {x: 79, y: -64}
+      - {x: 78, y: -61}
+      - {x: 73, y: -61}
+    - - {x: 81, y: -66}
+      - {x: 84, y: -65}
+      - {x: 84, y: -62}
+      - {x: 81, y: -61}
+      - {x: 79, y: -63}
+    - - {x: 105, y: -61}
+      - {x: 103, y: -62}
+      - {x: 103, y: -64}
+      - {x: 105, y: -66}
+      - {x: 116, y: -66}
+      - {x: 118, y: -64}
+      - {x: 117, y: -61}
+    - - {x: -244, y: -63}
+      - {x: -241, y: -62}
+      - {x: -241, y: -59}
+      - {x: -244, y: -58}
+      - {x: -246, y: -60}
+    - - {x: -236, y: -51}
+      - {x: -233, y: -50}
+      - {x: -233, y: -47}
+      - {x: -236, y: -46}
+      - {x: -238, y: -48}
+    - - {x: 92, y: 20}
+      - {x: 87, y: 12}
+      - {x: 87, y: -19}
+      - {x: 92, y: -27}
+      - {x: 99, y: -27}
+      - {x: 104, y: -19}
+      - {x: 104, y: 12}
+      - {x: 99, y: 20}
+    - - {x: 162, y: 17}
+      - {x: 158, y: 17}
+      - {x: 152, y: 15}
+      - {x: 151, y: 9}
+      - {x: 151, y: -21}
+      - {x: 154, y: -27}
+      - {x: 166, y: -27}
+      - {x: 168, y: -26}
+      - {x: 168, y: 8}
+      - {x: 167, y: 11}
+    - - {x: 215, y: -19}
+      - {x: 219, y: -26}
+      - {x: 228, y: -26}
+      - {x: 232, y: -25}
+      - {x: 232, y: 15}
+      - {x: 231, y: 19}
+      - {x: 220, y: 19}
+      - {x: 215, y: 11}
+    - - {x: 27, y: 17}
+      - {x: 23, y: 11}
+      - {x: 23, y: -18}
+      - {x: 30, y: -21}
+      - {x: 37, y: -21}
+      - {x: 40, y: -19}
+      - {x: 40, y: 11}
+      - {x: 39, y: 17}
+    - - {x: -39, y: 8}
+      - {x: -44, y: 4}
+      - {x: -44, y: -6}
+      - {x: -42, y: -13}
+      - {x: -27, y: -13}
+      - {x: -23, y: -9}
+      - {x: -23, y: 1}
+      - {x: -25, y: 8}
+    - - {x: -84, y: 5}
+      - {x: -106, y: 5}
+      - {x: -113, y: 4}
+      - {x: -113, y: -7}
+      - {x: -84, y: -7}
+      - {x: -82, y: -5}
+      - {x: -82, y: 1}
+      - {x: -83, y: 4}
+    - - {x: -173, y: 3}
+      - {x: -177, y: 0}
+      - {x: -177, y: -1}
+      - {x: -173, y: -4}
+      - {x: -150, y: -4}
+      - {x: -146, y: -1}
+      - {x: -146, y: 0}
+      - {x: -150, y: 3}
+    - - {x: -239, y: 1}
+      - {x: -238, y: -2}
+      - {x: -214, y: -2}
+      - {x: -212, y: 0}
+      - {x: -213, y: 3}
+      - {x: -237, y: 3}
+    - - {x: 92, y: 82}
+      - {x: 87, y: 74}
+      - {x: 87, y: 42}
+      - {x: 96, y: 34}
+      - {x: 104, y: 34}
+      - {x: 104, y: 79}
+      - {x: 99, y: 82}
+    - - {x: -221, y: 83}
+      - {x: -228, y: 83}
+      - {x: -234, y: 75}
+      - {x: -237, y: 48}
+      - {x: -237, y: 39}
+      - {x: -229, y: 37}
+      - {x: -221, y: 37}
+      - {x: -216, y: 45}
+      - {x: -213, y: 67}
+      - {x: -213, y: 77}
+    - - {x: -149, y: 80}
+      - {x: -156, y: 82}
+      - {x: -164, y: 82}
+      - {x: -169, y: 76}
+      - {x: -169, y: 37}
+      - {x: -157, y: 37}
+      - {x: -149, y: 44}
+      - {x: -148, y: 48}
+      - {x: -148, y: 77}
+    - - {x: -93, y: 81}
+      - {x: -100, y: 81}
+      - {x: -108, y: 72}
+      - {x: -108, y: 52}
+      - {x: -105, y: 38}
+      - {x: -102, y: 37}
+      - {x: -92, y: 37}
+      - {x: -86, y: 45}
+      - {x: -86, y: 73}
+    - - {x: -38, y: 82}
+      - {x: -45, y: 65}
+      - {x: -45, y: 51}
+      - {x: -44, y: 49}
+      - {x: -37, y: 37}
+      - {x: -29, y: 37}
+      - {x: -20, y: 47}
+      - {x: -20, y: 64}
+      - {x: -27, y: 82}
+    - - {x: 28, y: 83}
+      - {x: 23, y: 75}
+      - {x: 23, y: 40}
+      - {x: 28, y: 37}
+      - {x: 39, y: 37}
+      - {x: 42, y: 41}
+      - {x: 42, y: 70}
+      - {x: 36, y: 83}
+    - - {x: 153, y: 81}
+      - {x: 148, y: 75}
+      - {x: 147, y: 70}
+      - {x: 147, y: 67}
+      - {x: 149, y: 66}
+      - {x: 147, y: 65}
+      - {x: 151, y: 43}
+      - {x: 156, y: 37}
+      - {x: 161, y: 37}
+      - {x: 167, y: 39}
+      - {x: 168, y: 45}
+      - {x: 168, y: 78}
+      - {x: 163, y: 81}
+    - - {x: 220, y: 82}
+      - {x: 214, y: 76}
+      - {x: 214, y: 37}
+      - {x: 229, y: 37}
+      - {x: 232, y: 40}
+      - {x: 232, y: 74}
+      - {x: 229, y: 82}
+    - - {x: -169, y: 38}
+      - {x: -166, y: 39}
+      - {x: -166, y: 42}
+      - {x: -169, y: 43}
+      - {x: -171, y: 41}
+    - - {x: 104, y: 40}
+      - {x: 107, y: 41}
+      - {x: 107, y: 44}
+      - {x: 104, y: 45}
+      - {x: 102, y: 43}
+    - - {x: 76, y: 52}
+      - {x: 75, y: 50}
+      - {x: 75, y: 47}
+      - {x: 78, y: 45}
+      - {x: 82, y: 45}
+      - {x: 84, y: 46}
+      - {x: 84, y: 50}
+      - {x: 81, y: 52}
+    - - {x: 17, y: 57}
+      - {x: 17, y: 50}
+      - {x: 20, y: 48}
+      - {x: 23, y: 49}
+      - {x: 23, y: 55}
+      - {x: 21, y: 57}
+    - - {x: 43, y: 48}
+      - {x: 46, y: 49}
+      - {x: 46, y: 52}
+      - {x: 43, y: 53}
+      - {x: 41, y: 51}
+    - - {x: -240, y: 54}
+      - {x: -237, y: 55}
+      - {x: -237, y: 58}
+      - {x: -240, y: 59}
+      - {x: -242, y: 57}
+    - - {x: -84, y: 55}
+      - {x: -81, y: 56}
+      - {x: -81, y: 59}
+      - {x: -84, y: 60}
+      - {x: -86, y: 58}
+    - - {x: -17, y: 55}
+      - {x: -14, y: 56}
+      - {x: -14, y: 59}
+      - {x: -17, y: 60}
+      - {x: -19, y: 58}
+    - - {x: 211, y: 59}
+      - {x: 214, y: 60}
+      - {x: 214, y: 63}
+      - {x: 211, y: 64}
+      - {x: 209, y: 62}
+    - - {x: -85, y: 62}
+      - {x: -82, y: 63}
+      - {x: -82, y: 66}
+      - {x: -85, y: 67}
+      - {x: -87, y: 65}
+    - - {x: -19, y: 63}
+      - {x: -16, y: 64}
+      - {x: -16, y: 67}
+      - {x: -19, y: 68}
+      - {x: -21, y: 66}
+    - - {x: -244, y: 64}
+      - {x: -241, y: 65}
+      - {x: -241, y: 68}
+      - {x: -244, y: 69}
+      - {x: -246, y: 67}
+    - - {x: -46, y: 68}
+      - {x: -43, y: 69}
+      - {x: -43, y: 72}
+      - {x: -46, y: 73}
+      - {x: -48, y: 71}
+    - - {x: 212, y: 68}
+      - {x: 215, y: 69}
+      - {x: 215, y: 72}
+      - {x: 212, y: 73}
+      - {x: 210, y: 71}
+    - - {x: 213, y: 75}
+      - {x: 216, y: 76}
+      - {x: 216, y: 79}
+      - {x: 213, y: 80}
+      - {x: 211, y: 78}
+    - - {x: -82, y: 78}
+      - {x: -79, y: 79}
+      - {x: -79, y: 82}
+      - {x: -82, y: 83}
+      - {x: -84, y: 81}
+    - - {x: -236, y: 79}
+      - {x: -233, y: 80}
+      - {x: -233, y: 83}
+      - {x: -236, y: 84}
+      - {x: -238, y: 82}
+    - - {x: -89, y: 79}
+      - {x: -86, y: 80}
+      - {x: -86, y: 83}
+      - {x: -89, y: 84}
+      - {x: -91, y: 82}
+    physicsShape: []
+    bones: []
+    spriteID: 334638636bf6dc649b8ba9ed540dddf9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
