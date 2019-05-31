@@ -5,7 +5,7 @@ from discriminator import Discriminator
 
 class CDCGAN(object):
     """docstring for CDCGAN."""
-    def __init__(self, zdim, ydim, xshape, lr=0.00005, beta1=0.5):
+    def __init__(self, zdim, ydim, xshape, lr=0.0002, beta1=0.5):
         self.is_training = tf.placeholder(tf.bool)
 
         self.zs = tf.placeholder(tf.float32, [None, zdim])

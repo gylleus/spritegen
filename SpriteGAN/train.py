@@ -33,7 +33,7 @@ def convert_img_for_training(gen_x):
 
 
 
-batch_size = 64#8
+batch_size = 32#8
 epochs = 100000
 draw_step = 500
 device = '/cpu:0'
@@ -61,7 +61,7 @@ n = len(filenames)
 filenames = tf.constant(filenames)
 print(filenames)
 # `labels[i]` is the label for the image in `filenames[i].
-labels = np.ones((712, 1))
+labels = np.ones((n, 1))
 labels = tf.constant(labels) # label 0 for character images
 
 dataset = tf.data.Dataset.from_tensor_slices((filenames, labels)).repeat()
@@ -90,12 +90,12 @@ with tf.Session() as sess:
         track_d_loss.append(dloss)
         track_g_loss.append(gloss) # self, sess, xs, d_ys, zs, g_ys, is_training=True
         if epoch < 1000:
-            sched = 50
+            sched = 150
         else:
-            sched = 250
-        if epoch % sched == 0:
+            sched = 350
+        if epoch % sched == 0:                      # zs, ys, is_training
             imgs = model.sample_generator(sess, zs=np.repeat(np.random.uniform(-1, 1, (10, zdim)), 10, axis=0),
-                                          ys=np.tile(np.eye(ydim), [1, 1]))
+                                          ys=np.repeat(np.ones((10, 1)), 10, axis=0))#np.tile(np.eye(ydim), [1, 1]))
             fig = plt.figure()
             fig.subplots_adjust(left=0, bottom=0, right=1, top=1, wspace=0, hspace=0.1)
             for i in range(10*10):
