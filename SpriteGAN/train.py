@@ -84,7 +84,6 @@ with tf.Session() as sess:
         except tf.errors.OutOfRangeError:
             iterator = batched_dataset.make_one_shot_iterator()
             continue
-        #print(batch_ys.eval().size())
         #print(zdim.size())
         gloss, dloss = model.train_step(sess, convert_img_for_training(batch_xs.eval()[:,0,:,:,:]),
                 batch_ys.eval(), np.random.uniform(0, 1, (batch_size, zdim)), np.ones((batch_size, 1)))
