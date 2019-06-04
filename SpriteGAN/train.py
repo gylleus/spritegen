@@ -34,7 +34,7 @@ def convert_img_for_training(gen_x):
 
 
 batch_size = 32#8
-epochs = 100000
+gradient_updates = 100000
 draw_step = 500
 device = '/cpu:0'
 
@@ -77,7 +77,7 @@ with tf.Session() as sess:
     sess.run(tf.global_variables_initializer())
     track_d_loss = []
     track_g_loss = []
-    for epoch in range(epochs):
+    for step in range(gradient_updates):
         start = datetime.datetime.now()
         try:
             batch_xs, batch_ys = iterator.get_next()
@@ -89,24 +89,29 @@ with tf.Session() as sess:
                 batch_ys.eval(), np.random.uniform(0, 1, (batch_size, zdim)), np.ones((batch_size, 1)))
         track_d_loss.append(dloss)
         track_g_loss.append(gloss) # self, sess, xs, d_ys, zs, g_ys, is_training=True
-        if epoch < 1000:
-            sched = 150
+        if step < 1000:
+            sched = 300
         else:
-            sched = 350
-        if epoch % sched == 0:                      # zs, ys, is_training
+            sched = 300
+        if step % sched == 0:                      # zs, ys, is_training
             imgs = model.sample_generator(sess, zs=np.repeat(np.random.uniform(-1, 1, (10, zdim)), 10, axis=0),
                                           ys=np.repeat(np.ones((10, 1)), 10, axis=0))#np.tile(np.eye(ydim), [1, 1]))
             fig = plt.figure()
             fig.subplots_adjust(left=0, bottom=0, right=1, top=1, wspace=0, hspace=0.1)
             for i in range(10*10):
                 fig.add_subplot(10, 10, i + 1)
+                #testar = tf.check_numerics(imgs[i, :, :, :], "NAN FOUND!!!!", name=None)
+                #print('Vad tsta; ', testar)
                 plt.imshow(convert_img_for_display(imgs[i, :, :, :]))
                 plt.axis('off')
-            plt.savefig('./GeneratedImages/iter_{}.png'.format(epoch))
+                # kan det vara vara att NaN+värden genereras?
+            plt.savefig('./GeneratedImages/iter_{}.png'.format(step))
             plt.close()
-
+            end = datetime.datetime.now()
+            print('step: {}/{},\t G loss: {:.4f}, D loss: {:.4f}\t| time: {}'.
+                  format(step, gradient_updates, gloss, dloss, end - start))
             # Then plot the loss in an appealing format
-            if epoch > 1: # Ensures there is data to plot
+            if step > 1: # Ensures there is data to plot
                 def smooth(y, box_pts):
                     box = np.ones(box_pts)/box_pts
                     y_smooth = np.convolve(y, box, mode='same')
@@ -125,10 +130,8 @@ with tf.Session() as sess:
                 axs[1].plot(track_g_loss, alpha=0.3, linewidth=5, c='C4')
                 axs[1].plot(xs[w:-w], smooth(track_g_loss, w)[w:-w], c='C4')
                 axs[1].set_title('Generator', fontsize=10)
-                axs[1].set_xlabel('Epoch')
+                axs[1].set_xlabel('step')
                 axs[1].set_ylabel('loss', fontsize=10)
                 plt.savefig('./GeneratedImages/images'+'loss_tracking.png')
                 plt.close()
-        end = datetime.datetime.now()
-        print('Epoch: {}/{},\t G loss: {:.4f}, D loss: {:.4f}\t| time: {}'.
-              format(epoch, epochs, gloss, dloss, end-start))
+

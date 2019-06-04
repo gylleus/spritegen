@@ -32,7 +32,7 @@ original = []
 for filename in glob.glob(path_to_img+'/*.gif'):
     original.append(filename)
 
-# Resize images and save them for further processing
+# Resize images and save them
 t = 0
 for image in original:
     resize_img(image, path_to_output_dir)
