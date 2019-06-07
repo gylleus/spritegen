@@ -6,7 +6,7 @@ class Discriminator(tf.keras.Model):
     self.conv0 = tf.keras.layers.Conv2D(filters=8, kernel_size = 4, strides = 2, input_shape=(32, 32, 3), padding="VALID")
     self.batch_norm_0 = tf.keras.layers.BatchNormalization()
 
-    self.conv1 = tf.keras.layers.Conv2D(filters=16, kernel_size = 4, strides = 2, padding="VALID")
+    self.conv1 = tf.keras.layers.Conv2D(filters=32, kernel_size = 4, strides = 2, padding="VALID")
     self.batch_norm_1 = tf.keras.layers.BatchNormalization()
 
     self.conv2 = tf.keras.layers.Conv2D(filters=8, kernel_size = 4, strides = 2)

@@ -10,8 +10,6 @@ import datetime
 import tensorflow.contrib.eager as tfe
 import time
 import os
-import warnings
-warnings.filterwarnings("ignore", module="matplotlib")
 
 tf.enable_eager_execution()
 
@@ -22,6 +20,9 @@ parser.add_argument('--gradient_updates', type=int, default=3500, help='Number o
 parser.add_argument('--learning_rate', type=float, default=0.0002, help='Learning Rate(default 0.0002)')
 parser.add_argument('--output_dir', type=str, default='./', help='Output directory (default ./)')
 parser.add_argument('--save_img', type=int, default=500, help='Save img interval (default 500)')
+parser.add_argument('--load_models', type=int, default=0, help='Load a pre-trained model. True: 1, False: 0 (default 0)')
+parser.add_argument('--saved_models_dir', type=str, default='./', help='Path to saved models (default ./)')
+parser.add_argument('--checkpoint', type=int, default=20000, help='Save model after set number of steps (default 20000)')
 args = parser.parse_args()
 
 def convert_img_for_display(gen_x):
@@ -58,6 +59,14 @@ gen = Generator()
 optimizer_disc = tf.train.AdamOptimizer(learning_rate=learning_rate)
 optimizer_gen = tf.train.AdamOptimizer(learning_rate=learning_rate)
 
+if args.load_models:
+  # retarded men fungerar - enligt https://github.com/keras-team/keras/issues/10417 , Ketan14as kommentar
+  zass = tf.random_normal(shape=(batch_size, 100), dtype='float32')
+  dafuq_data = tf.stop_gradient(gen(zass))
+  sauce = disc(dafuq_data)
+  disc.load_weights(args.saved_models_dir + "discriminator")
+  gen.load_weights(args.saved_models_dir + "generator")
+
 def _parse_function(filename):
   image_string = tf.read_file(filename)
   image_decoded = tf.image.decode_gif(image_string)
@@ -91,10 +100,6 @@ os.mkdir(output_dir)
 os.mkdir(output_dir_fixed)
 os.mkdir(output_dir_rand)
 os.mkdir(output_dir_model)
-#writer = SummaryWriter(output_dir)
-
-#checkpoint = tf.train.Checkpoint(optimizer_disc=optimizer_disc, optimizer_gen=optimizer_gen, disc=disc, gen=gen, learning_rate=learning_rate)
-
 
 random_vector_for_generation = tf.random_normal([16,zdim])
 
@@ -113,19 +118,16 @@ for step in range(gradient_updates):
     gen_x = tf.stop_gradient(gen(z))
     # Gradient Pentalty
     gp = 0
-    """         epsilon = tf.random_uniform([], 0, 1)
-    print(epsilon)
+    """         
+    epsilon = tf.random_uniform([], 0, 1)
     xhat = epsilon*batch_xs + (1-epsilon)*gen_x
     with tfe.GradientTape() as gtape:
         gtape.watch(xhat)
         dhat = disc(xhat)
-        print("Juyaas", tf.shape(dhat))
-        print(type(dhat))
-        print(dhat)
     dhat2 = gtape.gradient(dhat, xhat)
-    print("YEa", dhat2)
     slopes = tf.sqrt(tf.reduce_sum(tf.square(dhat2), reduction_indices=[1]))
-    gp = tf.reduce_mean((slopes-1.0)**2) """
+    gp = tf.reduce_mean((slopes-1.0)**2) 
+    """
 
     # Record operations for automatic differentiation.
     with tfe.GradientTape() as disc_tape, tfe.GradientTape() as gen_tape:
@@ -165,11 +167,10 @@ for step in range(gradient_updates):
       learning_rate.assign(tf.train.exponential_decay(starter_learning_rate, step-10000, decay_steps=30000, decay_rate=0.8))
     #writer.add_scalar("loss/crit", loss_disc.numpy(), step)
     #writer.add_scalar("loss/gen", loss_gen.numpy(), step)
-    #if step % 100 == 0:
-      #tf.contrib.eager.Saver([disc, gen, optimizer_disc, optimizer_gen, learning_rate])
-      #checkpoint.save(output_dir_model)
-      #root.restore(tf.train.latest_checkpoint(checkpoint_dir))
-      #print("WALLA")
+    if step % args.checkpoint == 0:
+      disc.save_weights(output_dir_model+'discriminator')
+      gen.save_weights(output_dir_model+'generator')
+    
     if step % args.save_img == 0:
 
       print("Learning rate: ", learning_rate)
@@ -182,7 +183,7 @@ for step in range(gradient_updates):
       #gen_img = np.transpose(gen_img, (0, 3, 1, 2))
       #writer.add_image(str(step), gen_img[0, :, :, :], step)
 
-      # temp, tensorboard just don't wont to cooperate
+      # temp, tensorboard just doesn't wont to cooperate
       def smooth(y, box_pts):
         box = np.ones(box_pts)/box_pts
         y_smooth = np.convolve(y, box, mode='same')
