@@ -1,5 +1,6 @@
 from discriminator import Discriminator
 from generator import Generator
+import model_saver as ms
 #from tensorboardX import SummaryWriter # ...
 import matplotlib.pyplot as plt
 import tensorflow as tf
@@ -11,8 +12,6 @@ import tensorflow.contrib.eager as tfe
 import time
 import os
 
-tf.enable_eager_execution()
-
 parser = argparse.ArgumentParser(description='SpriteGAN')
 parser.add_argument('--path_to_dataset', type=str, default='./', help='Path to dataset(default ./)')
 parser.add_argument('--batch_size', type=int, default=64, help='Batch Size(default 64)')
@@ -23,7 +22,14 @@ parser.add_argument('--save_img', type=int, default=500, help='Save img interval
 parser.add_argument('--load_models', type=int, default=0, help='Load a pre-trained model. True: 1, False: 0 (default 0)')
 parser.add_argument('--saved_models_dir', type=str, default='./', help='Path to saved models (default ./)')
 parser.add_argument('--checkpoint', type=int, default=20000, help='Save model after set number of steps (default 20000)')
+parser.add_argument('--export_model', action='store_true')
 args = parser.parse_args()
+
+if args.export_model:
+  ms.save_generator(args.saved_models_dir + "generator")
+  exit()
+
+tf.enable_eager_execution()
 
 def convert_img_for_display(gen_x):
     OldMin = -1

@@ -34,5 +34,5 @@ class Generator(tf.keras.Model):
     x = self.conv2(x)
     x = self.batch_norm_2(x)
 
-    x = tf.nn.tanh(x)
+    x = tf.nn.tanh(x, name="output_node")
     return x
