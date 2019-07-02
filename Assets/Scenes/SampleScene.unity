@@ -199,6 +199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 400346524}
   - component: {fileID: 400346523}
+  - component: {fileID: 400346525}
   m_Layer: 0
   m_Name: SpriteGenerator
   m_TagString: Untagged
@@ -213,7 +214,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 400346522}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 189877a3e215b5345b4b14df8778e412, type: 3}
   m_Name: 
@@ -240,6 +241,21 @@ Transform:
   m_Father: {fileID: 501683084}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &400346525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400346522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49fcd1ef7737144489904cc781e74a6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathToModel: 
+  graphModel: {fileID: 0}
+  inputDimension: 100
 --- !u!1 &501683083
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,7 +387,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1657396880
 Transform:
   m_ObjectHideFlags: 0
@@ -393,7 +409,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657396879}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b83023ff77d71674287d583c1e2acd1a, type: 3}
   m_Name: 
@@ -478,6 +494,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2485417462419375175, guid: 4702161a840f4d348b41e026a6b1e1e4,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2887163226429795530, guid: 4702161a840f4d348b41e026a6b1e1e4,
         type: 3}
       propertyPath: movementSpeed
@@ -492,11 +513,6 @@ PrefabInstance:
         type: 3}
       propertyPath: minInputAxis
       value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2485417462419375175, guid: 4702161a840f4d348b41e026a6b1e1e4,
-        type: 3}
-      propertyPath: m_Name
-      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2485417462419375170, guid: 4702161a840f4d348b41e026a6b1e1e4,
         type: 3}
